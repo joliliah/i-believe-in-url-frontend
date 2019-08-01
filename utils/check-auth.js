@@ -7,12 +7,12 @@ const checkAuth = () => {
     credentials: 'include'
   })
     .then(res => {
-      console.log(res)
+      console.log(res);
       if(res.ok) {
         console.log('GOOD JOB YOU CAN ACCESS OUR SITE HOORAY');
       }
       else {
-        console.log('everything is terrible forever in check auth js')
+        console.log('everything is terrible forever in check auth js');
         window.location = './auth.html';
       }
     });
