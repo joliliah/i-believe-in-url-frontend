@@ -35,3 +35,24 @@ form.addEventListener('submit', (event) => {
       }
     });
 });
+
+const button = document.getElementById('sign-out');
+
+button.addEventListener('click', () => {
+  return fetch('https://joliliah.herokuapp.com/api/v1/auth/signout', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    // body: JSON.stringify({ username, password }),
+    credentials: 'include'
+  })
+    .then(res => {
+      if(res.status === 204) {
+        window.location = 'auth.html'; 
+      } 
+      else {
+        p.textContent = 'you have hit your else block YOU CAN NEVER LEAVE'; 
+      }
+    });
+});

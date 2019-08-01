@@ -1,11 +1,4 @@
-const form = document.getElementById('user-form');
-const p = document.getElementById('message');
-const button = document.getElementById('sign-up');
-
-button.addEventListener('click', (event) => {
-  event.preventDefault();
-  window.location = 'sign-up.html'
-})
+const form = document.getElementById('user-signup');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -13,7 +6,7 @@ form.addEventListener('submit', (event) => {
   const username = formData.get('username');
   const password = formData.get('password');
 
-  return fetch('https://joliliah.herokuapp.com/api/v1/auth/signin', {
+  return fetch('https://joliliah.herokuapp.com/api/v1/auth/signup', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
