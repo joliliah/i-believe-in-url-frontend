@@ -20,4 +20,5 @@ a:visited {
 
 a {
   color: rgb(24, 64, 103);
+  text-decoration: none;
 }

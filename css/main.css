@@ -50,6 +50,7 @@ p {
 a {
   font-family: 'Nova Slim', cursive;
   color: rgb(35, 98, 160);
+  text-decoration: none;
 }
 
 a:visited {
