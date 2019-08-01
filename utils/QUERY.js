@@ -2,32 +2,32 @@ const QUERY = {
 
   parse(queryString) {
 
-      const queryProps = {};
+    const queryProps = {};
 
-      const searchParams = new URLSearchParams(queryString);
+    const searchParams = new URLSearchParams(queryString);
 
-      searchParams.forEach((value, key) => {
+    searchParams.forEach((value, key) => {
 
-          queryProps[key] = value;
+      queryProps[key] = value;
 
-      });
+    });
 
-      return queryProps;
+    return queryProps;
 
   },
   stringify(queryProps) {
 
-      const searchParams = new URLSearchParams();
-      const keys = Object.keys(queryProps);
+    const searchParams = new URLSearchParams();
+    const keys = Object.keys(queryProps);
 
-      keys.forEach(key => {
+    keys.forEach(key => {
 
-          const value = queryProps[key];
+      const value = queryProps[key];
 
-          searchParams.set(key, value);
+      searchParams.set(key, value);
 
-      });
-      return searchParams.toString();
+    });
+    return searchParams.toString();
   }
 };
 

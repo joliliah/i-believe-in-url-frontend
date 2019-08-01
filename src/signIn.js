@@ -18,12 +18,12 @@ form.addEventListener('submit', (event) => {
     .then(res => {
       console.log('sign in', res);
       if(res.ok === true) {
-        console.log('we are hitting our if block in signin js')
-        window.location = 'index.html' 
+        console.log('we are hitting our if block in signin js');
+        window.location = 'index.html'; 
       } 
       else {
-        console.log('we are hitting our else block fam')
+        console.log('we are hitting our else block fam');
         p.textContent = 'NO BUENO FAM'; 
       }
-    })
-})
+    });
+});

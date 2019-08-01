@@ -19,14 +19,14 @@ form.addEventListener('submit', (event) => {
     credentials: 'include'
   })
     .then(res => Promise.all([res.ok, res.json()]))
-    .then(([ ok, json ]) => {
+    .then(([ok, json]) => {
       if(ok) {
-        console.log('we are hitting our if block in signin js')
-        p.textContent = `https://joliliah.herokuapp.com/${json.shortURLId}`
+        console.log('we are hitting our if block in signin js');
+        p.textContent = `https://joliliah.herokuapp.com/${json.shortURLId}`;
       } 
       else {
-        console.log('shorty aint working')
+        console.log('shorty aint working');
         p.textContent = 'NO BUENO FAM'; 
       }
-    })
-})
+    });
+});
