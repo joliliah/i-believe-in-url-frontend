@@ -1,5 +1,4 @@
 const form = document.getElementById('user-form');
-const p = document.getElementById('message');
 const button = document.getElementById('sign-up');
 
 button.addEventListener('click', (event) => {
@@ -12,6 +11,7 @@ form.addEventListener('submit', (event) => {
   const formData = new FormData(event.target);
   const username = formData.get('username');
   const password = formData.get('password');
+  const p = document.getElementById('message');
 
   return fetch('https://joliliah.herokuapp.com/api/v1/auth/signin', {
     method: 'POST',
@@ -22,12 +22,11 @@ form.addEventListener('submit', (event) => {
     credentials: 'include'
   })
     .then(res => {
-
       if(res.ok) {
         window.location = 'index.html'; 
       } 
       else {
-        p.textContent = 'NO BUENO FAM'; 
+        p.textContent = 'Sign in failed! GO SIGN UP!'; 
       }
     });
 });

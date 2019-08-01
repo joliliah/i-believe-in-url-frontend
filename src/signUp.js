@@ -5,7 +5,8 @@ form.addEventListener('submit', (event) => {
   const formData = new FormData(event.target);
   const username = formData.get('username');
   const password = formData.get('password');
-
+  const p = document.getElementById('message');
+  
   return fetch('https://joliliah.herokuapp.com/api/v1/auth/signup', {
     method: 'POST',
     headers: {
@@ -15,14 +16,11 @@ form.addEventListener('submit', (event) => {
     credentials: 'include'
   })
     .then(res => {
-      console.log('sign in', res);
-      if(res.ok === true) {
-        console.log('we are hitting our if block in signin js');
-        window.location = 'index.html'; 
+      if(!res.ok) {
+        p.textContent = 'Sign up failed! Try again but BETTER THIS TIME!'; 
       } 
       else {
-        console.log('we are hitting our else block fam');
-        p.textContent = 'NO BUENO FAM'; 
+        window.location = 'index.html'; 
       }
     });
 });
