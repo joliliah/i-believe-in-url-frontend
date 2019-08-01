@@ -4,8 +4,8 @@ const button = document.getElementById('sign-up');
 
 button.addEventListener('click', (event) => {
   event.preventDefault();
-  window.location = 'sign-up.html'
-})
+  window.location = 'sign-up.html';
+});
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -22,13 +22,11 @@ form.addEventListener('submit', (event) => {
     credentials: 'include'
   })
     .then(res => {
-      console.log('sign in', res);
-      if(res.ok === true) {
-        console.log('we are hitting our if block in signin js');
+
+      if(res.ok) {
         window.location = 'index.html'; 
       } 
       else {
-        console.log('we are hitting our else block fam');
         p.textContent = 'NO BUENO FAM'; 
       }
     });

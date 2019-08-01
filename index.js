@@ -24,14 +24,12 @@ form.addEventListener('submit', (event) => {
     .then(res => Promise.all([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(ok) {
-        console.log('we are hitting our if block in signin js');
         a.href = `https://joliliah.herokuapp.com/${json.shortURLId}`;
         a.textContent = `https://joliliah.herokuapp.com/${json.shortURLId}`;
         a.target = '_blank';
       } 
       else {
-        console.log('shorty aint working');
-        p.textContent = 'NO BUENO FAM'; 
+        p.textContent = 'You don\'t have an account! Please sign THE HECK UP'; 
       }
     });
 });
