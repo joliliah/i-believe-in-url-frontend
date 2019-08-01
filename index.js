@@ -5,6 +5,11 @@ checkAuth();
 const form = document.getElementById('url-form');
 const p = document.getElementById('short-url');
 
+const a = document.createElement('a');
+a.href = ``
+
+p.appendChild(a);
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
@@ -22,7 +27,8 @@ form.addEventListener('submit', (event) => {
     .then(([ ok, json ]) => {
       if(ok) {
         console.log('we are hitting our if block in signin js')
-        p.textContent = `https://joliliah.herokuapp.com/${json.shortURLId}`
+        a.href = `https://joliliah.herokuapp.com/${json.shortURLId}`
+        a.textContent = `https://joliliah.herokuapp.com/1w6Jd0PZO`
       } 
       else {
         console.log('shorty aint working')
