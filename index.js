@@ -18,11 +18,11 @@ form.addEventListener('submit', (event) => {
     body: JSON.stringify({ originalURL: longURL }),
     credentials: 'include'
   })
-    .then(res => {
-      console.log('sign in', res);
-      if(res.ok === true) {
+    .then(res => Promise.all([res.ok, res.json()]))
+    .then(([ ok, json ]) => {
+      if(ok) {
         console.log('we are hitting our if block in signin js')
-        p.textContent = `https://joliliah.herokuapp.com/${res.shortURLId}`
+        p.textContent = `https://joliliah.herokuapp.com/${json.shortURLId}`
       } 
       else {
         console.log('shorty aint working')
