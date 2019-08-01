@@ -1,4 +1,5 @@
 import QUERY from './QUERY.js';
+
 const hashStorage = {
     get() {
         const hash = window.location.hash.slice(1);

@@ -4,10 +4,10 @@ const p = document.getElementById('message');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
-  const username = formData.get('userName');
+  const username = formData.get('username');
   const password = formData.get('password');
 
-  return fetch('http://localhost:7890/api/v1/auth/signin', {
+  return fetch('https://joliliah.herokuapp.com/api/v1/auth/signin', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -16,7 +16,14 @@ form.addEventListener('submit', (event) => {
     credentials: 'include'
   })
     .then(res => {
-      console.log(res.ok);
-      res.ok ? window.location = 'index.html' : p.textContent = 'NO BUENO FAM' 
+      console.log('sign in', res);
+      if(res.ok === true) {
+        console.log('we are hitting our if block in signin js')
+        window.location = 'index.html' 
+      } 
+      else {
+        console.log('we are hitting our else block fam')
+        p.textContent = 'NO BUENO FAM'; 
+      }
     })
 })

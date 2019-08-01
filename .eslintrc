@@ -1,202 +1,77 @@
-
-
 {
-
-  "extends": "eslint:recommended",
-
   "parserOptions": {
-
-  "ecmaVersion": 8,
-
-  "ecmaFeatures": {
-
-  "impliedStrict": true
-
+    "ecmaVersion": 9,
+    "sourceType": "module"
   },
-
-  "sourceType": "module"
-
-  },
-
   "env": {
-
-  "browser": true,
-
-  "es6": true
-
+    "es6": true,
+    "node": true,
+    "jest": true
   },
-
-  "globals": {
-
-  "QUnit": false,
-
-  "firebase": false,
-
-  "firebaseui": false
-
-  },
-
+  "extends": [
+    "eslint:recommended"
+  ],
   "rules": {
-
-  "eqeqeq": [
-
-  "error",
-
-  "always"
-
-  ],
-
-  "no-console": "warn",
-
-  "indent": [
-
-  "error",
-
-  4,
-
-  {
-
-  "SwitchCase": 1,
-
-  "ignoreComments": true
-
+    "no-console": "warn",
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "space-in-parens": [
+      "error"
+    ],
+    "space-infix-ops": "error",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "comma-spacing": "error",
+    "space-before-function-paren": [
+      "error",
+      "never"
+    ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true,
+        "overrides": {
+          "do": {
+            "after": false
+          },
+          "for": {
+            "after": false
+          },
+          "if": {
+            "after": false
+          },
+          "switch": {
+            "after": false
+          },
+          "while": {
+            "after": false
+          },
+          "catch": {
+            "after": false
+          }
+        }
+      }
+    ],
+    "array-bracket-spacing": "error"
   }
-
-  ],
-
-  "quotes": [
-
-  "error",
-
-  "single",
-
-  {
-
-  "avoidEscape": true,
-
-  "allowTemplateLiterals": true
-
-  }
-
-  ],
-
-  "no-multi-spaces": [
-
-  "error",
-
-  {
-
-  "ignoreEOLComments": true
-
-  }
-
-  ],
-
-  "new-cap": "error",
-
-  "no-redeclare": [
-
-  "error",
-
-  {
-
-  "builtinGlobals": true
-
-  }
-
-  ],
-
-  "semi": [
-
-  "error",
-
-  "always"
-
-  ],
-
-  "space-in-parens": [
-
-  "error"
-
-  ],
-
-  "space-infix-ops": "error",
-
-  "object-curly-spacing": [
-
-  "error",
-
-  "always"
-
-  ],
-
-  "comma-spacing": "error",
-
-  "space-before-function-paren": [
-
-  "error",
-
-  "never"
-
-  ],
-
-  "keyword-spacing": [
-
-  "error",
-
-  {
-
-  "before": true,
-
-  "after": true,
-
-  "overrides": {
-
-  "if": {
-
-  "after": false
-
-  },
-
-  "for": {
-
-  "after": false
-
-  },
-
-  "while": {
-
-  "after": false
-
-  },
-
-  "do": {
-
-  "after": false
-
-  },
-
-  "switch": {
-
-  "after": false
-
-  },
-
-  "catch": {
-
-  "after": false
-
-  }
-
-  }
-
-  }
-
-  ],
-
-  "array-bracket-spacing": "error"
-
-  }
-
-  }
-
+}

@@ -1,5 +1,5 @@
 const checkAuth = () => {
-  return fetch('https://joliliah.herokuapp.com/ap1/v1/auth/verify', {
+  return fetch('https://joliliah.herokuapp.com/api/v1/auth/verify', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -7,11 +7,13 @@ const checkAuth = () => {
     credentials: 'include'
   })
     .then(res => {
+      console.log(res)
       if(res.ok) {
-        console.log('GOOD JOB YOU CAN ACCESS OUR SITE HOORAY')
+        console.log('GOOD JOB YOU CAN ACCESS OUR SITE HOORAY');
       }
       else {
-        window.location = '/sign-in.html';
+        console.log('everything is terrible forever in check auth js')
+        window.location = './auth.html';
       }
     });
 };
