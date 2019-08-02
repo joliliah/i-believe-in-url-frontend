@@ -7,6 +7,7 @@ const QUERY = {
     searchParams.forEach((value, key) => {
       queryProps[key] = value;
     });
+    
     return queryProps;
   },
 
