@@ -8,6 +8,7 @@ button.addEventListener('click', (event) => {
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
+  
   const formData = new FormData(event.target);
   const username = formData.get('username');
   const password = formData.get('password');
