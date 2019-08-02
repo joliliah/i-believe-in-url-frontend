@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Oval%7CNova+Slim&display=swap');
+
+.url-form-wrapper {
+  text-align: center;
+}
+
+#url-form label, #url-form input, #url-form button {
+  margin: 5px;
+  font-family: 'Nova Slim', cursive;
+}
+
+h2 {
+  color: #11314E;
+  font-family: 'Nova Oval', cursive;
+}
+
+a:visited {
+  color: rgb(179, 93, 61);
+}
+
+a {
+  color: rgb(24, 64, 103);
+  text-decoration: none;
+}

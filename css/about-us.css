@@ -1,0 +1,39 @@
+p {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.top-people {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 5%;
+}
+
+.top-people > div {
+    width: 45%;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.13);
+}
+
+.profile {
+    text-align: center;
+}
+
+img {
+    margin-top: 10px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+img :last-child {
+    width: 90px;
+}
+
+#back > a {
+    display: flex;
+    justify-content: center;
+    font-size: 2.3em;
+    text-decoration: none;
+}
